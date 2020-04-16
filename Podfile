@@ -7,4 +7,5 @@ target 'ImgurAPI' do
 
   # Pods for ImgurAPI
 	pod 'SnapKit'
+	pod 'Kingfisher', '~> 5.0'
 end

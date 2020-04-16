@@ -15,15 +15,30 @@ class DetailPresenterImpl: DetailPresenter {
     let router: DetailRouter
     let state: DetailState
     
+    // MARK: - Service
+    let service: DetailServiceImpl
+    
     // MARK: - Init
     init(view: DetailView,
          router: DetailRouter,
-         state: DetailState) {
+         state: DetailState,
+         service: DetailServiceImpl) {
         self.view = view
         self.router = router
         self.state = state
+        self.service = service
     }
 }
 
 //MARK: - Functions
-extension DetailPresenterImpl {}
+extension DetailPresenterImpl {
+    func downloadComments(imageID: String?) {
+        guard let imageID = imageID else { return }
+        service.downloadComments(imageID: imageID) { comments, error in
+            guard let comments = comments, error == nil else { return }
+            DispatchQueue.main.async {
+                self.view.setComments(comments: comments)
+            }
+        }
+    }
+}

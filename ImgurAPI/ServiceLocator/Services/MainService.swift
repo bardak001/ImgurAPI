@@ -28,10 +28,11 @@ extension MainServiceImpl {
             "mature": "false",
             "album_previews": "false"
         ]
-        let headers: [String: String] = [
-            "Authorization": "Client-ID dbc3c5c75b03803"
-        ]
-        RequestManager.sendRequest(urlString, parameters: parameters, headers: headers) { responseObject, error in
+//        let headers: [String: String] = [
+//            "Authorization": "Client-ID dbc3c5c75b03803"
+//        ]
+        RequestManager.sendRequest(urlString,
+                                   parameters: parameters) { responseObject, error in
             guard let responseObject = responseObject,
                 error == nil,
                 let datasets = responseObject["data"] as? [[String: Any]] else {
@@ -41,14 +42,14 @@ extension MainServiceImpl {
             var imageArray = [ImageModel]()
             for data in datasets {
                 if let images = data["images"] as? [[String: Any]], let image = images.first  {
-                    let imageModel = ImageModel(datetime: image["datetime"] as? Int ?? 0,
+                    let imageModel = ImageModel(id: data["id"] as? String ?? "",
+                                                datetime: image["datetime"] as? Int ?? 0,
                                                 description: image["description"] as? String ?? "",
                                                 favorite: image["favorite"] as? Int ?? 0,
                                                 link: image["link"] as? String ?? "",
                                                 title: data["title"] as? String ?? "",
                                                 views: image["views"] as? Int ?? 0)
                     imageArray.append(imageModel)
-//                    print("image: datetime - \(imageModel.datetime), description - \(imageModel.description), favorite - \(imageModel.favorite), link - \(imageModel.link), title - \(imageModel.title), views - \(imageModel.views)")
                 }
             }
             complection(imageArray, nil)

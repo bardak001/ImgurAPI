@@ -13,16 +13,17 @@ class DetailAssembly {
     static func createModule(serviceLocator: ServiceLocator,
                              model: ImageModel) -> UIViewController {
         
-        let view = DetailViewController(model: model)
+        let view = DetailViewController()
         let state = DetailState()
         let router = DetailRouterImpl(serviceLocator: serviceLocator)
         router.viewController = view
         
         let presenter = DetailPresenterImpl(view: view,
                                             router: router,
-                                            state: state)
+                                            state: state,
+                                            service: serviceLocator.detailService)
         view.presenter = presenter
-        
+        view.model = model
         return view
     }
 }

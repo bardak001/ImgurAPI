@@ -12,7 +12,6 @@ class DefaultServiceLocator: ServiceLocator {
     
     private let requestManager = RequestManager()
     
-    // MARK: - main
     lazy var mainService = MainServiceImpl(requestManager: requestManager)
-
+    lazy var detailService = DetailServiceImpl(requestManager: requestManager)
 }

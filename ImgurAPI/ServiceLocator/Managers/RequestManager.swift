@@ -11,17 +11,16 @@ import UIKit
 class RequestManager {
     class func sendRequest(_ url: String,
                            parameters: [String: String],
-                           headers: [String: String],
                            completion: @escaping ([String: Any]?, Error?) -> Void) {
         var components = URLComponents(string: url)!
-        components.queryItems = parameters.map { (key, value) in
-            URLQueryItem(name: key, value: value)
+        if parameters.count != 0 {
+            components.queryItems = parameters.map { (key, value) in
+                URLQueryItem(name: key,
+                             value: value)
+            }
+            components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         }
-        components.percentEncodedQuery = components.percentEncodedQuery?.replacingOccurrences(of: "+", with: "%2B")
         var request = URLRequest(url: components.url!)
-        print(request)
-        print(components)
-        
         request.addValue("Client-ID dbc3c5c75b03803", forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in

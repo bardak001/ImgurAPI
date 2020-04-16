@@ -8,14 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5BB3B41B8502EF672FCB4DB8 /* Pods_ImgurAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E426554D384BDC7E144FCBA /* Pods_ImgurAPI.framework */; };
+		9E588EEC24483FB000C89FF3 /* CommentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E588EEB24483FB000C89FF3 /* CommentCollectionViewCell.swift */; };
+		9E588EEE244842E800C89FF3 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E588EED244842E800C89FF3 /* CommentModel.swift */; };
 		9E6BE5B4244774D2001A960C /* ImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BE5B3244774D2001A960C /* ImageModel.swift */; };
-		9E82F8DD24477AA8005684C4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8DC24477AA8005684C4 /* Extension.swift */; };
 		9E82F8E024477C13005684C4 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8DF24477C13005684C4 /* DetailAssembly.swift */; };
 		9E82F8E224477C1B005684C4 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8E124477C1B005684C4 /* DetailPresenter.swift */; };
 		9E82F8E424477C22005684C4 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8E324477C22005684C4 /* DetailRouter.swift */; };
 		9E82F8E624477C2A005684C4 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8E524477C2A005684C4 /* DetailProtocols.swift */; };
 		9E82F8E824477C33005684C4 /* DetailState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8E724477C33005684C4 /* DetailState.swift */; };
 		9E82F8EA24477C3D005684C4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E82F8E924477C3D005684C4 /* DetailViewController.swift */; };
+		9E8CC15924482F6D00DF86E5 /* DetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CC15824482F6D00DF86E5 /* DetailService.swift */; };
+		9E8CC15E244832FC00DF86E5 /* CommentCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8CC15D244832FC00DF86E5 /* CommentCollectionView.swift */; };
 		9E90DB582446F562004236C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E90DB572446F562004236C2 /* AppDelegate.swift */; };
 		9E90DB612446F567004236C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E90DB602446F567004236C2 /* Assets.xcassets */; };
 		9E90DB642446F567004236C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E90DB622446F567004236C2 /* LaunchScreen.storyboard */; };
@@ -34,14 +37,17 @@
 
 /* Begin PBXFileReference section */
 		8E426554D384BDC7E144FCBA /* Pods_ImgurAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgurAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E588EEB24483FB000C89FF3 /* CommentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E588EED244842E800C89FF3 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		9E6BE5B3244774D2001A960C /* ImageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageModel.swift; sourceTree = "<group>"; };
-		9E82F8DC24477AA8005684C4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9E82F8DF24477C13005684C4 /* DetailAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembly.swift; sourceTree = "<group>"; };
 		9E82F8E124477C1B005684C4 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		9E82F8E324477C22005684C4 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		9E82F8E524477C2A005684C4 /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
 		9E82F8E724477C33005684C4 /* DetailState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailState.swift; sourceTree = "<group>"; };
 		9E82F8E924477C3D005684C4 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		9E8CC15824482F6D00DF86E5 /* DetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailService.swift; sourceTree = "<group>"; };
+		9E8CC15D244832FC00DF86E5 /* CommentCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCollectionView.swift; sourceTree = "<group>"; };
 		9E90DB542446F562004236C2 /* ImgurAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E90DB572446F562004236C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E90DB602446F567004236C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,9 +80,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E588EEA24483F8B00C89FF3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E588EEB24483FB000C89FF3 /* CommentCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		9E82F8DE24477BF7005684C4 /* DetailModule */ = {
 			isa = PBXGroup;
 			children = (
+				9E8CC15C244832CA00DF86E5 /* CollectionView */,
 				9E82F8DF24477C13005684C4 /* DetailAssembly.swift */,
 				9E82F8E124477C1B005684C4 /* DetailPresenter.swift */,
 				9E82F8E324477C22005684C4 /* DetailRouter.swift */,
@@ -85,6 +100,32 @@
 				9E82F8E924477C3D005684C4 /* DetailViewController.swift */,
 			);
 			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		9E8CC15A244830A100DF86E5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9E90DB822446FB1B004236C2 /* MainService.swift */,
+				9E8CC15824482F6D00DF86E5 /* DetailService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9E8CC15B244830AC00DF86E5 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				9E90DB802446FAF1004236C2 /* RequestManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		9E8CC15C244832CA00DF86E5 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9E588EEA24483F8B00C89FF3 /* Cell */,
+				9E8CC15D244832FC00DF86E5 /* CommentCollectionView.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		9E90DB4B2446F562004236C2 = {
@@ -115,7 +156,6 @@
 				9E82F8DE24477BF7005684C4 /* DetailModule */,
 				9E90DB602446F567004236C2 /* Assets.xcassets */,
 				9E90DB622446F567004236C2 /* LaunchScreen.storyboard */,
-				9E82F8DC24477AA8005684C4 /* Extension.swift */,
 				9E90DB652446F567004236C2 /* Info.plist */,
 			);
 			path = ImgurAPI;
@@ -148,8 +188,8 @@
 			children = (
 				9E90DB7C2446FA88004236C2 /* DefaultServiceLocator.swift */,
 				9E90DB7E2446FA9F004236C2 /* ServiceLocator.swift */,
-				9E90DB802446FAF1004236C2 /* RequestManager.swift */,
-				9E90DB822446FB1B004236C2 /* MainService.swift */,
+				9E8CC15B244830AC00DF86E5 /* Managers */,
+				9E8CC15A244830A100DF86E5 /* Services */,
 			);
 			path = ServiceLocator;
 			sourceTree = "<group>";
@@ -158,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				9E6BE5B3244774D2001A960C /* ImageModel.swift */,
+				9E588EED244842E800C89FF3 /* CommentModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,11 +344,14 @@
 				9E82F8EA24477C3D005684C4 /* DetailViewController.swift in Sources */,
 				9E90DB722446F832004236C2 /* MainRouter.swift in Sources */,
 				9E82F8E024477C13005684C4 /* DetailAssembly.swift in Sources */,
+				9E588EEE244842E800C89FF3 /* CommentModel.swift in Sources */,
 				9E90DB742446F83A004236C2 /* MainProtocols.swift in Sources */,
 				9E90DB6E2446F81E004236C2 /* MainAssembly.swift in Sources */,
+				9E8CC15E244832FC00DF86E5 /* CommentCollectionView.swift in Sources */,
+				9E588EEC24483FB000C89FF3 /* CommentCollectionViewCell.swift in Sources */,
 				9E82F8E624477C2A005684C4 /* DetailProtocols.swift in Sources */,
-				9E82F8DD24477AA8005684C4 /* Extension.swift in Sources */,
 				9E82F8E224477C1B005684C4 /* DetailPresenter.swift in Sources */,
+				9E8CC15924482F6D00DF86E5 /* DetailService.swift in Sources */,
 				9E90DB582446F562004236C2 /* AppDelegate.swift in Sources */,
 				9E90DB702446F829004236C2 /* MainPresenter.swift in Sources */,
 				9E82F8E424477C22005684C4 /* DetailRouter.swift in Sources */,

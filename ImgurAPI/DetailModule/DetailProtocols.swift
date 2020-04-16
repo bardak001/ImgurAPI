@@ -9,9 +9,12 @@
 import UIKit
 
 protocol DetailPresenter: AnyObject {
+    func downloadComments(imageID: String?)
 }
 
-protocol DetailView: AnyObject {}
+protocol DetailView: AnyObject {
+    func setComments(comments: [CommentModel])
+}
 
 protocol DetailRouter {
 }

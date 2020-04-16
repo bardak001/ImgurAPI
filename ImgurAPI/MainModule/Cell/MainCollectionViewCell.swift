@@ -14,7 +14,6 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .red
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -22,7 +21,6 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     private let label: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .red
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -45,8 +43,8 @@ class MainCollectionViewCell: UICollectionViewCell {
     
     func setImageModel(_ model: ImageModel) {
         prepareForReuse()
-        imageView.loadImageUsingCacheWithUrlStringEXT(urlString: model.link)
-        print(model.link)
+        let url = URL(string: model.link)
+        imageView.kf.setImage(with: url)
         label.text = model.title
     }
     

@@ -38,7 +38,6 @@ extension MainPresenterImpl {
             DispatchQueue.main.async {
                 self.view.setImageModels(models)
             }
-            
         }
     }
     func modelSelected(_ model: ImageModel) {

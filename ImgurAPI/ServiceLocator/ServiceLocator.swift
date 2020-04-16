@@ -8,4 +8,5 @@
 
 protocol ServiceLocator {
     var mainService: MainServiceImpl { get }
+    var detailService: DetailServiceImpl { get }
 }
